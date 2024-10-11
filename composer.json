@@ -1,0 +1,59 @@
+{
+  "name": "onomica/module-rewards-points",
+  "version": "1.0.0",
+  "description": "Rewards Points Module Shopware Extension by Onomica",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "onomica",
+      "homepage": "https://onomica.com"
+    }
+  ],
+  "require": {
+    "shopware/core": "~6.6",
+    "shopware/administration": "~6.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "OnomicaRewards\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OnomicaRewards\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "OnomicaRewards\\OnomicaRewards",
+    "copyright": "onomica",
+    "label": {
+      "de-DE": "Onomica Newsletter",
+      "en-GB": "Onomica Newsletter"
+    },
+    "description": {
+      "de-DE": "Implementieren Sie ein Belohnungspunktesystem einfach in Ihrem Shopware-Shop. Mit dem Onomica Rewards Points Module verdienen Kunden Punkte beim Einkaufen und können diese gegen Rabatte oder Prämien eintauschen.",
+      "en-GB": "Implement a rewards points system effortlessly in your Shopware store. With the Onomica Rewards Points Module, customers earn points on purchases and can redeem them for discounts or rewards."
+    },
+    "manufacturerLink": {
+      "de-DE": "https://www.onomica.com/",
+      "en-GB": "https://www.onomica.com/"
+    },
+    "supportLink": {
+      "de-DE": "https://www.onomica.com/",
+      "en-GB": "https://www.onomica.com/"
+    }
+  },
+  "scripts": {
+    "cs-fixer-dry": [
+      "@php ../../../vendor/bin/php-cs-fixer fix . --dry-run --rules=@PER-CS2.0,no_unused_imports"
+    ],
+    "cs-fixer": [
+      "@php ../../../vendor/bin/php-cs-fixer fix . --rules=@PER-CS2.0,no_unused_imports"
+    ],
+    "phpstan": [
+      "@php ../../../src/Core/DevOps/StaticAnalyze/phpstan-bootstrap.php",
+      "@php ../../../vendor/bin/phpstan analyze"
+    ]
+  }
+}
